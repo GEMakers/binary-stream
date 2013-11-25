@@ -26,6 +26,10 @@ exports.Reader = function (data, endianess) {
     this.readBytes = function(count) {
         var bytes = [];
         
+        if (count == undefined) {
+            count = buffer.length - index;
+        }
+        
         for (var i = 0; i < count; i++) {
             bytes.push(buffer[index++]);
         }
