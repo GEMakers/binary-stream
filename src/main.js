@@ -5,8 +5,8 @@
  *  
  */
 
-exports.BIG_ENDIAN = 1;
-exports.LITTLE_ENDIAN = 2;
+exports.BIG_ENDIAN = "big";
+exports.LITTLE_ENDIAN = "little";
 
 exports.Reader = function (data, endianess) {
     var buffer = new Buffer(data);
