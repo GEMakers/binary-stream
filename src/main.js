@@ -96,24 +96,6 @@ exports.Reader = function (data, endianess) {
         index += 4;
         return value;
     };
-    
-    this.readUInt64 = function() {
-        var value = (endian == exports.BIG_ENDIAN)
-            ? buffer.readUInt64BE(index)
-            : buffer.readUInt64LE(index);
-            
-        index += 8;
-        return value;
-    };
-    
-    this.readInt64 = function() {
-        var value = (endian == exports.BIG_ENDIAN)
-            ? buffer.readInt64BE(index)
-            : buffer.readInt64LE(index);
-            
-        index += 8;
-        return value;
-    };
 };
 
 exports.Writer = function(size, endianess) {
@@ -187,22 +169,6 @@ exports.Writer = function(size, endianess) {
             : buffer.writeInt32LE(value, index);
             
         index += 4;
-    };
-    
-    this.writeUInt64 = function(value) {
-        var value = (endian == exports.BIG_ENDIAN)
-            ? buffer.writeUInt64BE(value, index)
-            : buffer.writeUInt64LE(value, index);
-            
-        index += 8;
-    };
-    
-    this.writeInt64 = function(value) {
-        var value = (endian == exports.BIG_ENDIAN)
-            ? buffer.writeInt64BE(value, index)
-            : buffer.writeInt64LE(value, index);
-            
-        index += 8;
     };
 };
 
