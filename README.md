@@ -2,6 +2,34 @@
 
 This node.js package provides a set of classes used to progressively read and write to a stream or buffer.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [API](#api)
+  - [stream.BIG_ENDIAN](#streambig_endian)
+  - [stream.LITTLE_ENDIAN](#streamlittle_endian)
+  - [stream.Reader(data, endianess)](#streamreaderdata-endianess)
+    - [reader.readBytes(count)](#readerreadbytescount)
+    - [reader.readAscii(count)](#readerreadasciicount)
+    - [reader.readHex(count)](#readerreadhexcount)
+    - [reader.readUInt8()](#readerreaduint8)
+    - [reader.readInt8()](#readerreadint8)
+    - [reader.readUInt16()](#readerreaduint16)
+    - [reader.readInt16()](#readerreadint16)
+    - [reader.readUInt32()](#readerreaduint32)
+    - [reader.readInt32()](#readerreadint32)
+  - [stream.Writer(size, endianess)](#streamwritersize-endianess)
+    - [writer.writeBytes(value)](#writerwritebytesvalue)
+    - [writer.writeAscii(value)](#writerwriteasciivalue)
+    - [writer.writeHex(value)](#writerwritehexvalue)
+    - [writer.writeUInt8(value)](#writerwriteuint8)
+    - [writer.writeInt8(value)](#writerwriteint8)
+    - [writer.writeUInt16(value)](#writerwriteuint16)
+    - [writer.writeInt16(value)](#writerwriteint16)
+    - [writer.writeUInt32(value)](#writerwriteuint32)
+    - [writer.writeInt32(value)](#writerwriteint32)
+    - [writer.toArray()](#writertoarray)
+
 ## Installation
 To install this application using the node.js package manager, issue the following commands:
 
@@ -14,32 +42,6 @@ To include this package in your application, use the *require* function.
 ``` javascript
 var stream = require("binary-stream");
 ```
-
-## Table of Contents
-
-- [stream.BIG_ENDIAN](#streambig_endian)
-- [stream.LITTLE_ENDIAN](#streamlittle_endian)
-- [stream.Reader(data, endianess)](#streamreaderdata-endianess)
-  - [reader.readBytes(count)](#readerreadbytescount)
-  - [reader.readAscii(count)](#readerreadasciicount)
-  - [reader.readHex(count)](#readerreadhexcount)
-  - [reader.readUInt8()](#readerreaduint8)
-  - [reader.readInt8()](#readerreadint8)
-  - [reader.readUInt16()](#readerreaduint16)
-  - [reader.readInt16()](#readerreadint16)
-  - [reader.readUInt32()](#readerreaduint32)
-  - [reader.readInt32()](#readerreadint32)
-- [stream.Writer(size, endianess)](#streamwritersize-endianess)
-  - [writer.writeBytes(value)](#writerwritebytesvalue)
-  - [writer.writeAscii(value)](#writerwriteasciivalue)
-  - [writer.writeHex(value)](#writerwritehexvalue)
-  - [writer.writeUInt8(value)](#writerwriteuint8)
-  - [writer.writeInt8(value)](#writerwriteint8)
-  - [writer.writeUInt16(value)](#writerwriteuint16)
-  - [writer.writeInt16(value)](#writerwriteint16)
-  - [writer.writeUInt32(value)](#writerwriteuint32)
-  - [writer.writeInt32(value)](#writerwriteint32)
-  - [writer.toArray()](#writertoarray)
 
 ## API
 Below is the documentation for each of the functions provided by this plugin, as well as a few examples showing how to use them.
