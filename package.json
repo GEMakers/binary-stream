@@ -12,7 +12,6 @@
     "repository" : {
         "type": "git", "url": "https://github.com/GEMakers/binary-stream.git"
     },
-    "main" : "src/main.js",
     "version" : "0.1.0"
 }
 
